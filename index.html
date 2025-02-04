@@ -6,7 +6,21 @@
   <title>Document</title>
 </head>
 <body>
+  <!-- TODO: Build Tabbed Interface: Adult / Non Adult -->
+  <form>
+    <p>Item 1</p>
+    <!-- TODO: Update to Checkboxes and adjust values -->
+    <label><input type="radio" name="item1" value="1"> Strongly Disagree</label>
+    <label><input type="radio" name="item1" value="2"> Disagree</label>
+    <label><input type="radio" name="item1" value="3"> Neutral</label>
+    <label><input type="radio" name="item1" value="4"> Agree</label>
+    <label><input type="radio" name="item1" value="5"> Strongly Agree</label>
   
+    </form>
+  
+  <button onclick="calculateScaleScore()">Calculate Score</button>
+  
+  <p id="result"></p>
 </body>
 
 <script src="/js/stressCalc.js"></script>
