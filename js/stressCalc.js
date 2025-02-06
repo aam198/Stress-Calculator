@@ -12,4 +12,9 @@ function calculateScaleScore() {
 
   // Display the total score
   document.getElementById('result').textContent = "Total Score: " + totalScore;
+
+  if (totalScore < 150){
+    document.getElementById('interpText').style="display:block;";
+    document.getElementById('interpScore').textContent = "low risk of illness with a low susceptibility to stress induced health breakdown in the following 24 months after assessment."
+  }
 }

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Stress Score for Adult</title>
 </head>
 <body>
   <!-- TODO: Build Tabbed Interface: Adult / Non Adult -->
@@ -12,15 +12,26 @@
     <!-- TODO: Update to Checkboxes and adjust values -->
     <label><input type="checkbox" name="item1" value="100"> Death of a spouse</label>
     <label><input type="checkbox" name="item1" value="73"> Divorce</label>
-    <label><input type="checkbox" name="item1" value="3"> Marital separation</label>
-    <label><input type="checkbox" name="item1" value="4"> Imprisionment</label>
-    <label><input type="checkbox" name="item1" value="5"> Strongly Agree</label>
+    <label><input type="checkbox" name="item1" value="65"> Marital separation</label>
+    <label><input type="checkbox" name="item1" value="63"> Imprisonment</label>
+    <label><input type="checkbox" name="item1" value="63"> Death of a close family member</label>
+    <label><input type="checkbox" name="item1" value="53"> Personal injury or illness</label>
+    <label><input type="checkbox" name="item1" value="50"> Marriage</label>
+    <label><input type="checkbox" name="item1" value="47"> Dismissal from work</label>
+    <label><input type="checkbox" name="item1" value="45"> Marital reconciliation</label>
+    <label><input type="checkbox" name="item1" value="45"> Retirement</label>
+    <label><input type="checkbox" name="item1" value="44"> Change in health of family member</label>
+    <label><input type="checkbox" name="item1" value="40"> Pregnancy</label>
+    
+  
+
   
     </form>
   
-  <button onclick="calculateScaleScore()">Calculate Score</button>
-  
+  <button onclick="calculateScaleScore()">Calculate</button>
+  <button onclick="reset()">Reset</button>
   <p id="result"></p>
+  <p style="display:none;" id="interpText"><strong>Interpretation:</strong>The subject is described as at <strong><span id="interpScore"></span></strong></p>
 </body>
 
 <script src="/js/stressCalc.js"></script>
