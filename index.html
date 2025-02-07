@@ -1,38 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stress Score for Adult</title>
-</head>
-<body>
-  <!-- TODO: Build Tabbed Interface: Adult / Non Adult -->
-  <form>
-    <p>Adult</p>
-    <!-- TODO: Update to Checkboxes and adjust values -->
-    <label><input type="checkbox" name="item1" value="100"> Death of a spouse</label>
-    <label><input type="checkbox" name="item1" value="73"> Divorce</label>
-    <label><input type="checkbox" name="item1" value="65"> Marital separation</label>
-    <label><input type="checkbox" name="item1" value="63"> Imprisonment</label>
-    <label><input type="checkbox" name="item1" value="63"> Death of a close family member</label>
-    <label><input type="checkbox" name="item1" value="53"> Personal injury or illness</label>
-    <label><input type="checkbox" name="item1" value="50"> Marriage</label>
-    <label><input type="checkbox" name="item1" value="47"> Dismissal from work</label>
-    <label><input type="checkbox" name="item1" value="45"> Marital reconciliation</label>
-    <label><input type="checkbox" name="item1" value="45"> Retirement</label>
-    <label><input type="checkbox" name="item1" value="44"> Change in health of family member</label>
-    <label><input type="checkbox" name="item1" value="40"> Pregnancy</label>
-    
-  
 
-  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stress Score for Adult</title>
+  </head>
+
+  <body>
+    <!-- TODO: Build Tabbed Interface: Adult / Non Adult -->
+    <form>
+      <p>Adult</p>
+      <!-- TODO: Update to Checkboxes and adjust values -->
+      <label><input type="checkbox" name="item1" value="100"> Death of a
+        spouse</label>
+      <label><input type="checkbox" name="item1" value="73"> Divorce</label>
+      <label><input type="checkbox" name="item1" value="65"> Marital
+        separation</label>
+      <label><input type="checkbox" name="item1" value="63"> Imprisonment</label>
+      <label><input type="checkbox" name="item1" value="63"> Death of a close
+        family member</label>
+      <label><input type="checkbox" name="item1" value="53"> Personal injury or
+        illness</label>
+      <label><input type="checkbox" name="item1" value="50"> Marriage</label>
+      <label><input type="checkbox" name="item1" value="47"> Dismissal from
+        work</label>
+      <label><input type="checkbox" name="item1" value="45"> Marital
+        reconciliation</label>
+      <label><input type="checkbox" name="item1" value="45"> Retirement</label>
+      <label><input type="checkbox" name="item1" value="44"> Change in health of
+        family member</label>
+      <label><input type="checkbox" name="item1" value="40"> Pregnancy</label>
+      <label><input type="checkbox" name="item1" value="100"> Sexual difficulties</label>
+      <label><input type="checkbox" name="item1" value="100"> Gain a new family member</label>
+      <label><input type="checkbox" name="item2" value="100"> Business readjustment</label>
+      <label><input type="checkbox" name="item3" value="100"> Change in financial state</label>
+      <label><input type="checkbox" name="item4" value="100"> Death of a close friend</label>
+      <label><input type="checkbox" name="item5" value="100"> Change to different line of work</label>
+      <label><input type="checkbox" name="item6" value="100">Change in frequency of arguments</label>
+      <label><input type="checkbox" name="item7" value="100">Major mortgage</label>
+      <label><input type="checkbox" name="item8" value="100">Foreclosure of mortgage or loan</label>
+      <label><input type="checkbox" name="item9" value="100">Change in responsibilities at work</label>
+      <label><input type="checkbox" name="item10" value="100">Child leaving home</label>
     </form>
-  
-  <button onclick="calculateScaleScore()">Calculate</button>
-  <button onclick="reset()">Reset</button>
-  <p id="result"></p>
-  <p style="display:none;" id="interpText"><strong>Interpretation:</strong>The subject is described as at <strong><span id="interpScore"></span></strong></p>
-</body>
 
-<script src="/js/stressCalc.js"></script>
+    <button onclick="calculateScaleScore()">Calculate</button>
+    <button onclick="reset()">Reset</button>
+    <p id="result"></p>
+    <p style="display: none" id="interpText">
+      <strong>Interpretation:</strong>The subject is described as at
+      <strong><span id="interpScore"></span></strong>
+    </p>
+  </body>
+
+  <script src="/js/stressCalc.js"></script>
+
 </html>
