@@ -18,3 +18,10 @@ function calculateScaleScore() {
     document.getElementById('interpScore').textContent = "low risk of illness with a low susceptibility to stress induced health breakdown in the following 24 months after assessment."
   }
 }
+
+// Reset form
+
+function reset() {
+  document.getElementById("adult-form").reset();
+  document.getElementById("nonAdult-form").reset();
+}

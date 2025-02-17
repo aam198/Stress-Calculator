@@ -18,6 +18,10 @@ input[type="checkbox"]:checked{
 input[type="checkbox"]:not:checked{
 }
 
+input:focus-visible{
+  outline: 1px solid #9d3039;
+}
+
 /* Hide the browser's default checkbox */
   /* .tabcontent-container input {
     position: absolute;
