@@ -24,4 +24,5 @@ function calculateScaleScore() {
 function reset() {
   document.getElementById("adult-form").reset();
   document.getElementById("nonAdult-form").reset();
+  document.getElementById('interpText').style="display:none;";
 }
