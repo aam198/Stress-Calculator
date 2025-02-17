@@ -9,17 +9,24 @@ input[type="checkbox"]{
 }
 
 input[type="checkbox"]:checked{
-  accent-color: #9d3039;
+  accent-color: #2d728f;
   height: 18px;
   width: 18px;
 }
 
 /* TODO: finish not:checked state */
 input[type="checkbox"]:not:checked{
+  accent-color: #2d728f;
 }
-
+input:focus{
+  outline: 1px solid #2d728f;
+}
 input:focus-visible{
-  outline: 1px solid #9d3039;
+  outline: 2px solid #2d728f;
+}
+input:focus:not(:focus-visible){
+  outline: none;
+  box-shadow: 1px 1px 1px rgba(1, 1, 0, 0.3);
 }
 
 /* Hide the browser's default checkbox */
