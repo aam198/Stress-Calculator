@@ -29,11 +29,11 @@ function calculateScaleScore(e) {
 
 // Reset form
 
-// function reset() {
-//   document.getElementById('result').textContent = " ";
-//   document.getElementById('interpText').style.display="none";
-//   document.getElementById("adult-form").reset();
-//   document.getElementById("nonAdult-form").reset();
-// }
+function reset() {
+  document.getElementById('result').textContent = " ";
+  document.getElementById('interpText').style.display="none";
+  document.getElementById("adult-form").reset();
+  document.getElementById("nonAdult-form").reset();
+}
 
-// document.getElementById('reset').addEventListener('click',reset);
+document.getElementById('reset').addEventListener('click',reset);
