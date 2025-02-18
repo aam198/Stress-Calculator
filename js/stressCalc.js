@@ -1,4 +1,6 @@
-function calculateScaleScore() {
+function calculateScaleScore(e) {
+  e.preventDefault();
+
   let totalScore = 0;
 
   // Get all the checkbox buttons on the page
@@ -11,7 +13,7 @@ function calculateScaleScore() {
   });
 
   // Display the total score
-  document.getElementById('result').textContent = `Holmes & Rahe Stress Score: ${totalScore}`;
+  document.getElementById('result').textContent = `Holmes & Rahe Stress Score= ${totalScore}`;
   document.getElementById('interpText').style="display:block;";
 
   if (totalScore <= 150){
@@ -21,15 +23,17 @@ function calculateScaleScore() {
     document.getElementById('interpScore').textContent = "moderate risk with 50% chances of adverse health outcome."
   }
   else{
-    document.getElementById('interpScore').textContent = "carry a high risk of illness with 80% chances of major health breakdown."
+    document.getElementById('interpScore').textContent = "high risk of illness with 80% chances of major health breakdown."
   }
 }
 
 // Reset form
 
-function reset() {
-  document.getElementById('result').textContent = " ";
-  document.getElementById("adult-form").reset();
-  document.getElementById("nonAdult-form").reset();
-  document.getElementById('interpText').style="display:none;";
-}
+// function reset() {
+//   document.getElementById('result').textContent = " ";
+//   document.getElementById('interpText').style.display="none";
+//   document.getElementById("adult-form").reset();
+//   document.getElementById("nonAdult-form").reset();
+// }
+
+// document.getElementById('reset').addEventListener('click',reset);

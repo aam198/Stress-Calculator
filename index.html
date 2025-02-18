@@ -11,7 +11,7 @@
   <body>
     <!-- TODO: Build Tabbed Interface: Adult / Non Adult -->
     <div class="tabcontent-container">
-      <form id="adult-form">
+      <form id="adult-form" onsubmit="calculateScaleScore(event)">
         <p>Adult</p>
         <label><input type="checkbox" name="item1" value="100"> Death of a
           spouse</label>
@@ -63,11 +63,12 @@
         <label><input type="checkbox" name="item41" value="13"> Vacation</label>
         <label><input type="checkbox" name="item42" value="12"> Major holiday</label>
         <label><input type="checkbox" name="item43" value="11"> Minor violation of law</label>
+        <label><input type="submit" name="calculate">Calculate</label>
       </form>
-      <button onclick="calculateScaleScore()">Calculate</button>
-      <button onclick="reset()">Reset</button>
+      <!-- <button onclick="calculateScaleScore()">Calculate</button> -->
+      <!-- <button id="reset">Reset</button> -->
 
-      <p id="result"></p>
+      <p id="result"><strong></strong></p>
       <p style="display: none" id="interpText">
         <strong>Interpretation:</strong>The subject is described as at
         <strong><span id="interpScore"></span></strong>
