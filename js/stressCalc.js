@@ -11,17 +11,24 @@ function calculateScaleScore() {
   });
 
   // Display the total score
-  document.getElementById('result').textContent = "Total Score: " + totalScore;
+  document.getElementById('result').textContent = `Holmes & Rahe Stress Score: ${totalScore}`;
+  document.getElementById('interpText').style="display:block;";
 
-  if (totalScore < 150){
-    document.getElementById('interpText').style="display:block;";
+  if (totalScore <= 150){
     document.getElementById('interpScore').textContent = "low risk of illness with a low susceptibility to stress induced health breakdown in the following 24 months after assessment."
+  }
+  else if(totalScore > 150 && totalScore <= 299){
+    document.getElementById('interpScore').textContent = "moderate risk with 50% chances of adverse health outcome."
+  }
+  else{
+    document.getElementById('interpScore').textContent = "carry a high risk of illness with 80% chances of major health breakdown."
   }
 }
 
 // Reset form
 
 function reset() {
+  document.getElementById('result').textContent = " ";
   document.getElementById("adult-form").reset();
   document.getElementById("nonAdult-form").reset();
   document.getElementById('interpText').style="display:none;";
