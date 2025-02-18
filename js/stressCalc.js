@@ -1,5 +1,4 @@
-function calculateScaleScore(e) {
-  e.preventDefault();
+function calculateScaleScore() {
 
   let totalScore = 0;
 
@@ -37,3 +36,4 @@ function reset() {
 }
 
 document.getElementById('reset').addEventListener('click',reset);
+document.getElementById('calculateScore').addEventListener('click', calculateScaleScore); 

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stress Score Test</title>
+</head>
+<body>
+  <div class="tabbed-interface">
+    <div class="tab-section" data-group="adult">
+      <form class="stress-form">
+        <label><input type="checkbox" value="100" /> Death of a spouse</label>
+        <label><input type="checkbox" value="73" /> Divorce</label>
+        <label><input type="checkbox" value="65" /> Marital separation</label>
+        <!-- Add other checkboxes here -->
+      </form>
+      <button class="calculate-score">Calculate</button>
+      <button class="reset-form">Reset</button>
+      <p><strong><span class="result"></span></strong></p>
+      <p class="interp-text" style="display: none">
+        <strong>Interpretation:</strong> The subject is described as at 
+        <strong><span class="interp-score"></span></strong>
+      </p>
+    </div>
+  
+    <div class="tab-section" data-group="non-adult">
+      <form class="stress-form">
+        <label><input type="checkbox" value="100" /> Death of a parent</label>
+        <label><input type="checkbox" value="100" /> Unplanned pregnancy/abortion</label>
+        <label><input type="checkbox" value="95" /> Getting married</label>
+        <!-- Add other checkboxes here -->
+      </form>
+      <button class="calculate-score">Calculate</button>
+      <button class="reset-form">Reset</button>
+      <p><strong><span class="result"></span></strong></p>
+      <p class="interp-text" style="display: none">
+        <strong>Interpretation:</strong> The subject is described as at 
+        <strong><span class="interp-score"></span></strong>
+      </p>
+    </div>
+  </div>
+  
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".tab-section").forEach((section) => {
+      const form = section.querySelector(".stress-form");
+      const resultDisplay = section.querySelector(".result");
+      const interpText = section.querySelector(".interp-text");
+      const interpScore = section.querySelector(".interp-score");
+  
+      function calculateScaleScore() {
+        let totalScore = [...form.querySelectorAll('input[type="checkbox"]:checked')]
+          .reduce((sum, checkbox) => sum + parseInt(checkbox.value, 10), 0);
+  
+        resultDisplay.textContent = `Holmes & Rahe Stress Score = ${totalScore}`;
+        interpText.style.display = "block";
+        interpScore.textContent = 
+          totalScore <= 150 ? "low risk of illness." :
+          totalScore <= 299 ? "moderate risk with 50% chances of adverse health outcome." :
+          "high risk of illness with 80% chances of major health breakdown.";
+      }
+  
+      function resetForm() {
+        form.reset();
+        resultDisplay.textContent = "";
+        interpText.style.display = "none";
+      }
+  
+      section.querySelector(".calculate-score").addEventListener("click", calculateScaleScore);
+      section.querySelector(".reset-form").addEventListener("click", resetForm);
+    });
+  });
+  </script>
+  
+  
+</body>
+</html>
