@@ -1,6 +1,12 @@
 
-/* tab container */
+:root{
+  dark-blue: #0e2439;
+}
 
+/* tab container */
+div.tabbed-interface{
+  border: 2px solid #e1e1e1;
+}
 /* Checkbox styling  */
 
 input[type="checkbox"]{
@@ -10,8 +16,6 @@ input[type="checkbox"]{
 
 input[type="checkbox"]:checked{
   accent-color: #2d728f;
-  height: 18px;
-  width: 18px;
 }
 
 /* TODO: finish not:checked state */
