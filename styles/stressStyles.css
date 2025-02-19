@@ -32,7 +32,14 @@ input:focus:not(:focus-visible){
   outline: none;
   box-shadow: 1px 1px 1px rgba(1, 1, 0, 0.3);
 }
-
+button.calculate-score, button.reset-form{
+  cursor: pointer;
+  margin: 10px 0 0 15px;
+  font-weight: medium;
+  font-size: 16px;
+  padding-block: calc(0.25rem*2.5);
+  padding-inline: calc(0.25rem * 5);
+}
 /* Hide the browser's default checkbox */
   /* .tabcontent-container input {
     position: absolute;
