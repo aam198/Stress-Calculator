@@ -30,7 +30,7 @@ input:focus:not(:focus-visible){
 
 button.calculate-score, button.reset-form{
   cursor: pointer;
-  margin: 1rem 0 1rem 1.6rem;
+  margin: 1.6rem 1.6rem;
   font-weight: medium;
   font-size: 16px;
   padding-block: calc(0.25rem*2.5);
@@ -42,9 +42,22 @@ button.calculate-score, button.reset-form{
     transition: all .2s ease-in;
     background-color: #F0F0F2;
 }
-button.calculate-score:hover, button.reset-form:hover{
-  background-color: #2d728f;
+
+button.calculate-score{
+  background-color: #407C96;
   color: #ffffff;
+}
+
+button.reset-form{
+  background-color: #e1e1e1;
+}
+
+button.calculate-score:hover{
+  background-color: #245b72;
+}
+
+button.reset-form:hover{
+  background-color: #cbcbcb;
 }
 
 .checkmark {
