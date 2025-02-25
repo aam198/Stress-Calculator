@@ -67,15 +67,18 @@
         </form>
         <button class="calculate-score">Calculate</button>
         <button class="reset-form">Reset</button>
-        <p><strong><span class="result"></span></strong></p>
-        <p class="interp-text" style="display: none">
-          <strong>Interpretation:</strong> The subject is described as at
+        <div>
+          <strong>Holmes & Rahe Stress Score = <span class="result"> </span></strong><br/>
+          <div>
+            <strong>Interpretation: </strong> 
+            <span class="interp-text" style="display:none;"> The subject is described as at</span>
           <strong><span class="interp-score"></span></strong>
-        </p>
+          </div>
+        </div>
       </div>
 
       <div class="tab-section" data-group="non-adult">
-        <form class="stress-form">
+        <form class="stress-form row">
           <label class="col-xs-12 col-sm-6"><input type="checkbox" name="item1" value="100"> Death of a
             parent</label>
           <label class="col-xs-12 col-sm-6"><input type="checkbox" name="item2" value="100"> Unplanned pregnancy/abortion</label>
@@ -119,9 +122,10 @@
         </form>
         <button class="calculate-score">Calculate</button>
         <button class="reset-form">Reset</button>
-        <p><strong><span class="result"></span></strong></p>
-        <p class="interp-text" style="display: none">
-          <strong>Interpretation:</strong> The subject is described as at
+        <div>
+          <strong>Holmes & Rahe Stress Score = <span class="result"></span></strong>
+        <p>
+          <strong>Interpretation:</strong><span class="interp-text" style="display:none;"> The subject is described as at</span>
           <strong><span class="interp-score"></span></strong>
         </p>
       </div>
@@ -139,12 +143,12 @@
             let totalScore = [...form.querySelectorAll('input[type="checkbox"]:checked')]
               .reduce((sum, checkbox) => sum + parseInt(checkbox.value, 10), 0);
 
-            resultDisplay.textContent = `Holmes & Rahe Stress Score = ${totalScore}`;
-            interpText.style.display = "block";
+            resultDisplay.textContent = totalScore;
+            interpText.style.display = "inline-block";
             interpScore.textContent =
-              totalScore <= 150 ? "low risk of illness." :
-                totalScore <= 299 ? "moderate risk with 50% chances of adverse health outcome." :
-                  "high risk of illness with 80% chances of major health breakdown.";
+              totalScore <= 150 ? " low risk of illness." :
+                totalScore <= 299 ? " moderate risk with 50% chances of adverse health outcome." :
+                  " high risk of illness with 80% chances of major health breakdown.";
           }
 
           function resetForm() {
