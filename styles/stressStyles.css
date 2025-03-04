@@ -3,17 +3,32 @@
   dark-blue: #0e2439;
 }
 
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 /* Info Card Styling */
 .info-card{
-  width: calc(100% - 10px);
+  width: calc(100% - 5rem);
   background-color: #f9f4eb;
+  color: #2e2e30;
+  font-family: 'ProximaNovaRegular', Arial, sans-serif;
   border-radius: 1rem;
   border-bottom-right-radius: 2px;
   box-shadow: 10px 10px #e6e0d3;
-  font-size: 1.8rem;
-  line-height: 1.2;
-  margin-bottom: 40px;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin: 2.5rem 2.5rem 2.5rem 2.5rem;
   padding: 1.6rem;
+}
+
+.info-card-heading{
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+
 }
 
 /* tab container */
