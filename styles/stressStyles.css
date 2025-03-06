@@ -87,18 +87,54 @@ button.reset-form:hover{
 }
 
 /* Table Styling */
-table {
+.table-container{
+  border-radius: .75rem;
   width: 100%;
-  border-collapse: collapse;
+  margin: 4rem 2rem;
 }
-th, td {
-  border: 1px solid #000;
-  padding: 8px;
+
+table {
+  margin: 0 auto;
+  border-spacing: 0;
+  border-collapse: separate;
+  color: #4e4e4e;
+  /* border-radius: .75rem;
+  border: 1px solid rgb(207 216 220/1); */
+}
+table tr td:first-child,
+table tr th:first-child{
+  border-left: 1px solid #d4d7d9
+}
+th, td{
+  --grey-500: #d4d7d9;
+  border-bottom: 1px solid var(--grey-500);
+  border-right: 1px solid var(--grey-500);
+}
+th{
+  padding: 1rem;
+  background-color: rgb(236 239 241/1);
+}
+td {
+  padding: 1rem;
   text-align: left;
 }
-th {
-  background-color: #f2f2f2;
+
+table tr th{
+  border-top: 1px solid #d4d7d9;
 }
+table tr:first-child th:first-child{
+  border-top-left-radius: 0.75rem;
+}
+table tr:first-child th:last-child{
+  border-top-right-radius: 0.75rem;
+}
+table tr:last-child td:first-child{
+  border-bottom-left-radius: 0.75rem;
+}
+table tr:last-child td:last-child{
+  border-bottom-right-radius: 0.75rem;
+}
+
 /* 
 .checkmark {
   position: absolute;
