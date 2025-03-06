@@ -9,7 +9,33 @@
   padding: 0;
 }
 
-/* Info Card Styling */
+/* border-top-card styling */
+.border-top-card{
+  background: #f0f2fa;
+  border-radius: 0.5rem;
+  border-top: .25rem solid #b7bac9;
+  margin: 2.5rem;
+  padding: 1.5rem 1.5rem 2rem;
+  max-width: 50rem;
+  width: 100%;
+}
+
+.border-top-card .title{
+  color: #374886;
+  font-size: 1.25rem;
+  letter-spacing: normal;
+  line-height: 1.25rem;
+  margin-bottom: .5rem;
+  text-align: left;
+}
+.border-top-card p{
+  padding-top: 0.5rem;
+  margin-bottom: 0;
+  line-height: 1.875rem;
+  color: #3a3b41;
+}
+
+/* info-card Styling */
 .info-card{
   width: calc(100% - 5rem);
   background-color: #f9f4eb;
