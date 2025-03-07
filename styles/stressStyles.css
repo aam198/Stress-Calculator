@@ -138,10 +138,10 @@ th, td{
 }
 th{
   padding: 1rem;
-  background-color: rgb(236 239 241/1);
+  background-color: #eceff1;
 }
 td {
-  padding: 1rem;
+  padding: 0.6rem;
   text-align: left;
 }
 
