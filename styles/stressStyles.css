@@ -124,9 +124,10 @@ table {
   border-spacing: 0;
   border-collapse: separate;
   color: #4e4e4e;
-  /* border-radius: .75rem;
-  border: 1px solid rgb(207 216 220/1); */
+  padding-bottom: 1rem;
+  width: 70vw;
 }
+
 table tr td:first-child,
 table tr th:first-child{
   border-left: 1px solid #d4d7d9
