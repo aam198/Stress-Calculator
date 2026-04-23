@@ -87,9 +87,8 @@
         <div>
           <strong>Holmes & Rahe Stress Score = <span class="result"> </span></strong><br/>
           <div>
-            <strong>Interpretation: </strong> 
-            <span class="interp-text" style="display:none;"> The subject is described as at</span>
-          <strong><span class="interp-score"></span></strong>
+            <span class="interp-text" style="display:none;"></span>
+            <span class="interp-score"></span>
           </div>
         </div>
         <!-- TODO: table -->
@@ -146,10 +145,8 @@
 
             resultDisplay.textContent = totalScore;
             interpText.style.display = "inline-block";
-            interpScore.textContent =
-              totalScore <= 150 ? " low risk of illness." :
-                totalScore <= 299 ? " moderate risk with 50% chances of adverse health outcome." :
-                  " high risk of illness with 80% chances of major health breakdown.";
+            interpScore.innerHTML = `<p>The <strong>Holmes and Rahe Social Readjustment Rating Scale (SRRS)</strong> was an early attempt to quantify how life stress relates to illness. The original findings suggested that scores below 150 indicated low risk, scores between 150–299 corresponded to roughly a 50% chance of illness, and scores above 300 were associated with as much as an 80% likelihood of illness in the following year. </p>
+            <p> However, subsequent research suggests these predictions should be interpreted cautiously. While higher scores are associated with increased health risk, the relationship is modest rather than strong, and the “80% likelihood” has not been consistently supported. The scale does not account for individual differences in perception, coping, or social support, nor does it capture chronic stress or daily hassles, which are often important determinants of health. In addition, “illness” in the original studies was broadly defined, encompassing a range of physical and psychological conditions.  As a result, the SRRS is best understood as a useful heuristic, but with limitations.</p>`
           }
 
           function resetForm() {
